@@ -188,3 +188,7 @@ CMD rails s
 ```
 
 The command to start the container is `docker run -p 3000:3000 [container id/name]`.
+
+## 1.16
+
+The app can be found in http://devops-with-docker-2020.herokuapp.com/
