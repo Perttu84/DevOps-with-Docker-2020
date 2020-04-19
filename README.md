@@ -156,7 +156,7 @@ The commands to start the containers are the same as in previous exercises.
 
 ## 1.13
 
-The Dockerfile for Java Spring project can be found [here](1.13/backend/Dockerfile).
+The Dockerfile for Java Spring project can be found [here](1.13/Dockerfile).
 
 The content for the Dockerfile is:
 ```
