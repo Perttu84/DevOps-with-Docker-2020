@@ -121,7 +121,7 @@ And the correct command to start the container is: `backend-example-docker pertt
 ## 1.12
 The altered Dockerfile for backend can be found [here](1.12/backend/Dockerfile) and for frontend [here](1.12/frontend/Dockerfile).
 
-The content for the backend Dockerfile is:
+The contents of the backend Dockerfile are:
 ```
 FROM ubuntu
 
@@ -158,7 +158,7 @@ The commands to start the containers are the same as in previous exercises.
 
 The Dockerfile for Java Spring project can be found [here](1.13/Dockerfile).
 
-The content for the Dockerfile is:
+The contents of the Dockerfile are:
 ```
 FROM openjdk:8
 
@@ -170,3 +170,21 @@ CMD java -jar ./target/docker-example-1.1.3.jar
 ```
 
 The command to start the container is `docker run -p 8080:8080 [container id/name]`.
+
+## 1.14
+
+The Dockerfile for the rails project can be found [here](1.14/Dockerfile).
+
+
+The contents of the Dockerfile are:
+```
+FROM ruby:2.6.0
+RUN apt-get update && apt-get install nodejs -y
+RUN git clone https://github.com/docker-hy/rails-example-project.git
+WORKDIR /rails-example-project
+RUN bundle install && rails db:migrate
+EXPOSE 3000
+CMD rails s
+```
+
+The command to start the container is `docker run -p 3000:3000 [container id/name]`.
