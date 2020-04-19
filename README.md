@@ -153,3 +153,20 @@ CMD npm start
 ```
 The commands to start the containers are the same as in previous exercises.
 
+
+## 1.13
+
+The Dockerfile for Java Spring project can be found [here](1.13/backend/Dockerfile).
+
+The content for the Dockerfile is:
+```
+FROM openjdk:8
+
+RUN git clone https://github.com/docker-hy/spring-example-project.git
+WORKDIR /spring-example-project
+RUN ./mvnw package
+EXPOSE 8080
+CMD java -jar ./target/docker-example-1.1.3.jar
+```
+
+The command to start the container is `docker run -p 8080:8080 [container id/name]`.
